@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nam Brow</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="icon" href="img/favicon.ico">
+  	<script type="text/javascript" src="js/jquery-3.3.1.slim.min.js"></script>
+  	<script type="text/javascript" src="js/popper.min.js"></script>
+  	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+  	<script type="text/javascript" src="js/bootstrap.bundle.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="hair.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<style type="text/css">
+      .tagp {
+        line-height: 1.7;
+        color: #bca858;
+        font-size: 26px;
+        font-weight: 400;
+        text-decoration: none;
+        font-family: 'Calistoga', cursive;
+      }
+      .tagp:hover {
+        text-decoration: none;
+        color: #bca858;
+      }
+      .bbtn {
+        font-family: 'Playfair Display', serif;
+        font-weight: 400;
+        border-radius: 60px;
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+      }
+      .bbtn:hover {
+        border-color: #bca858;
+        background-color: #bca858;
+        color: #ffffff;
+        transition: 0.5s;
+        box-shadow: 0 2px 40px 8px rgba(15, 15, 15, 0.15);
+      }
+      .bbtn:focus {
+        box-shadow: none;
+      }
+      .hv:hover {
+        color: #bca858;
+      }
+      @media (max-width: 576px){
+        
+      }   
+      @media (min-width: 576px) and (max-width: 767px) {
+        
+      }
+      /*// Medium devices (tablets, 768px and up)*/
+      @media ((min-width: 768px) and (max-width: 991px)) {
+        
+      }
+      /*// Large devices (desktops, 992px and up)*/
+      @media (min-width: 992px) {
+        .mg-l {
+          margin-left: 131px;
+        }
+      }
+      /*// Extra large devices (large desktops, 1200px and up)*/
+      @media (min-width: 1200px) {
+        .mg-l {
+          margin-left: 319px;
+        }
+        .bbtn {
+            height: 42px;
+            width: 150px;
+            font-size: 14px;
+        }
+      }
+    </style>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$(".button").click(function(){
+				var name = $(this).attr("data-filter");
+				if (name == "all") {
+					$(".filter").show("2000");
+				}
+				else{
+					$(".filter").not("."+name).hide("2000");
+					$(".filter").filter("."+name).show("2000");
+				}
+			});
+			$(".portfolio-menu button").click(function(){
+				$(this).addClass("btonafter").siblings().removeClass("btonafter");
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="grapper">
+		<!-- <div id="header">
+			<div class="top-header">
+				<div class="container h-100">
+					<div class="row align-items-center h-100">
+						<div class="col-5">
+							<div class="top-header-content">
+								<p>Welcome to hair salon!</p>
+							</div>
+						</div>
+						<div class="col-7">
+							<div class="top-header-content text-right">
+								<p>
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									 Mon-Sat: 8.00 to 17.00 
+									 &emsp; | &emsp;
+									<i class="fa fa-phone" aria-hidden="true"></i>
+									 </i>
+									 Call us: (+12)-345-6789	
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="seco-header">
+				<div class="classy-nav-container">
+					<div class="container">
+						<div class="row h-70 classy-navbar justify-content-between">
+							<!-- <div class="col-3 nav-brand">
+								<p class="ppp" style="cursor: pointer;">Nam Brow.</p>
+							</div>
+							<div class="col-9">
+								<div class="dropdownn classynav dplay-no">
+									<div class="btn-group">
+										<button onclick="location.href='index.html'" class="btn fcc bn bx-shd as" data-toggle="dropdown" type="button">Home
+										</button>
+									</div>
+									<div class="btn-group">
+										<button class="btn dropdown-toggle bn bx-shd as" data-toggle="dropdown">Pages
+										</button>
+										<div class="dropdown-menu">
+											<a href="hair.html" class="dropdown-item as">Home</a>
+											
+											<a href="about.html" class="dropdown-item as ">About Us</a>
+											
+											<a href="service.html" class="dropdown-item as">Services</a>
+											
+											<a class="dropdown-item as">Portfolio</a>
+											
+											<a href="blog.html" class="dropdown-item as">Blog Ddetails</a>
+											<div class="dropdown-divider"></div>
+											<a href="contact.html" class="dropdown-item dropdown-toggle as">Contact</a>
+										</div>
+									</div>
+									<div class="btn-group">
+										<button class="btn bn bx-shd as">Portfolio</button>
+										<button onclick="location.href='service.html'" class="btn bn bx-shd as">Services</button>
+										<button onclick="location.href='about.html'" class="btn bn bx-shd as">About Us</button>
+										<button onclick="location.href='blog.html'" class="btn bn bx-shd as">Blog</button>
+										<button formtarget="_blank" onclick="location.href='contact.html'" class="btn bn bx-shd as">Contact</button>
+									</div> &ensp;
+									<i class="fa as fa-shopping-cart" aria-hidden="true"></i> &ensp;
+									<button class="bbtn">
+											BOOK NOW
+									</button>
+								</div>
+								<div class="classy-navbar-toggler">
+								  <span class="navbarToggler">
+								    <span></span>
+								    <span></span>
+								    <span></span>
+								  </span>
+								</div>
+							</div> -->
+							<div class="col-12">
+						      <nav class="navbar navbar-expand-lg navbar-light asd">
+						        <a class="tagp" href="index.html">Nam Brow.</a>
+						        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						          <span class="navbar-toggler-icon"></span>
+						        </button>
+
+						        <div class="mg-l collapse navbar-collapse" id="navbarSupportedContent" style="z-index: 10;
+   											 padding: 2px;">
+						          <ul class=" navbar-nav">
+						            <li class="nav-item active">
+						              <a class="nav-link hv" href="index.html">Home <span class="sr-only"></span></a>
+						            </li>
+						            <!-- <li class="nav-item">
+						              <a class="nav-link" href="#">Link</a>
+						            </li> -->
+						            <li class="nav-item dropdown">
+						              <a class="nav-link dropdown-toggle cl-white" href="#" data-toggle="dropdown">
+						                Pages
+						              </a>
+						              <div class="dropdown-menu" >
+						                <a class="dropdown-item" href="index.html">Home</a>
+						                <a class="dropdown-item" href="#">Portfolio</a>
+						                <a class="dropdown-item" href="service.html">Services</a>
+						                <a class="dropdown-item" href="about.html">About Us</a>
+						                <a class="dropdown-item" href="blog.html">Blog Details</a>
+						                <div class="dropdown-divider"></div>
+						                <a class="dropdown-item" href="contact.html">Contact</a>
+						              </div>
+						            </li>
+						            <!-- <li class="nav-item">
+						              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+						            </li> -->
+						            <li class="nav-item active">
+						              <a class="nav-link cl-white" href="#">Portfolio<span class="sr-only"></span></a>
+						            </li>
+						            <li class="nav-item active">
+						              <a class="nav-link cl-white" href="service.html">Services<span class="sr-only"></span></a>
+						            </li>
+						            <li class="nav-item active">
+						              <a class="nav-link cl-white" href="about.html">About Us<span class="sr-only"></span></a>
+						            </li>
+						            <li class="nav-item active">
+						              <a class="nav-link cl-white" href="blog.html">Blog<span class="sr-only"></span></a>
+						            </li>
+						            <li class="nav-item active">
+						              <a class="nav-link cl-white" href="contact.html">Contact<span class="sr-only"></span></a>
+						            </li>
+						          </ul>
+						          <form class="form-inline my-2 my-lg-0">
+						            <i class="fa as fa-shopping-cart" aria-hidden="true"></i>
+						            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+						            <button class="btn bbtn my-2 my-sm-0" type="submit">BOOK NOW</button>
+						          </form>
+						        </div>
+						      </nav>
+						    </div>
+						</div>
+					</div>
+				</div>
+					
+			</div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+
+		<div class="owl-stage" style="z-index: 1;">
+			<div class="owl-item cloned">
+				<div class="single-welcome-slide bg-img" style="background-image: url(img/Screenshot2.png);">
+					<div class="welcome-content h-100">
+						<div class="container h-100">
+							<div class="row h-100 align-items-center">
+								<div class="col-12 col-md-9 col-lg-6">
+									<div class="welcome-text">
+										<h2 data-animation="fadeInUp">We Care About <br> Your Hair</h2>
+										<p data-animation="fadeInUp">“Discover your own style. Don't try to repeat what has already been written - have the courage to do your own thing and don't be afraid to do something different.”</p>
+										<button href="#" class="btn bx-shd nam-btn">about us</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+
+		<div class="padding-80-0">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="section-heading mb-80" style="text-align: center;">
+							<h2>Hair Salon</h2>
+							<p>The House of Hair Salon & Spa</p>
+							<span>About Us</span>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="mb-80">
+							<img src="img/Screenshot_2019-10-23 Akame - Hair Salon HTML Template.png" style="width: 100%;">
+						</div>
+					</div>
+					<div class="col-12 col-lg-4">
+						<div class="about-us mb-80 pl-4">
+							<h3>Beautiful Hair Comes From A Legendary.</h3>
+							<p>“Working in a salon, you look at trends all day long. You’re looking at color all the time,what new products are coming out. You’re a part of the fashion industry,especially if you’re working in a higher-end salon.”</p>
+							<button class="btn btnn bx-shd mt-30">
+								READ MORE
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+
+		<div class="container">
+			<div class="border-top mt-3"></div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+
+		<div class="padding-80-0">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-heading text-center">
+							<h2>Our Services</h2>
+							<p>The House of Hair Salon & Spa, incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="single mbb-80 fadeInUp" style="visibility: visible;animation-delay: 200ms;animation-name: fadeInUp;">
+							<img src="img/choi.png">
+							<h5>Coloring</h5>
+							<p>Ut enim ad minim veniam, quis trud exercitation...</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="single mbb-80 fadeInUp" style="visibility: visible;animation-delay: 200ms;animation-name: fadeInUp;">
+							<img src="img/toc.png">
+							<h5>Haircut</h5>
+							<p>Consectetur adipisicing elit, sed doe eiusmod.</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="single mbb-80 fadeInUp" style="visibility: visible;animation-delay: 200ms;animation-name: fadeInUp;">
+							<img src="img/kip.png">
+							<h5>Hairstyle</h5>
+							<p>Nemo enim ipsam voluptatem quia voluptas.</p>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="single mbb-80 fadeInUp" style="visibility: visible;animation-delay: 200ms;animation-name: fadeInUp;">
+							<img src="img/choi.png">
+							<h5>Coloring</h5>
+							<p>Ut enim ad minim veniam, quis trud exercitation...</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+
+		<div class="why-choose-us bg-gray padding-80-0">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-12 col-lg-6">
+						<div class="choose-thumnail mb-80 mt-30">
+							<div class="choose-us-img bg-img" style="background-image: url(img/hgirl.png);"></div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-6">
+						<div class="section-heading">
+							<h2>Why Choose Us</h2>
+							<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+						<div class="choose-us-content mt-30 mb-80">
+							<ul>
+								<li><i class="fa fa-check-square-o" aria-hidden="true"></i> We Strive For LIVE Answer On Our Calls.</li>
+								<li><i class="fa fa-check-square-o" aria-hidden="true"></i> A Wide Spectrum Of Skills And Experience.</li>
+								<li><i class="fa fa-check-square-o" aria-hidden="true"></i> Fast Response To Requests & Critical Response Time Guaranteed.</li>
+								<li><i class="fa fa-check-square-o" aria-hidden="true"></i> We Help Solve Your Business Problems.</li>
+							</ul>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+
+		<div class="padding-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-heading text-center">
+							<h2>Our Work</h2>
+							<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="portfolio-menu text-center mb-30">
+							<button class="btn button a bbtnn btonafter bx-shd" data-filter="all">All</button>
+							<button class="btn button a bbtnn bx-shd" data-filter="haircuts">Haircuts</button>
+							<button class="btn button a bbtnn bx-shd translt" data-filter="dye">Dye</button>
+							<button class="btn button a bbtnn bx-shd" data-filter="shave">Shave</button>
+							<button class="btn button a bbtnn bx-shd" data-filter="hairstyle">Hairstyle</button>
+						</div>
+					</div>
+				</div>
+				<div class="row portfolio-area" style="position: relative;">
+					<div class="col-12 col-sm-6 col-lg-3 portfolio-item mb-30 fadeInUp haircuts shave filter hairstyle dye anhig1" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp; position: absolute; left: 0%; top: 0px;">
+						<div class="portfolio-item">
+							<img src="img/moi.png">
+							<div class="overlay-content d-flex align-items-center justify-content-center">
+								<div class="overlay-text text-center">
+									<h4>Hairstyle</h4>
+									<p>Consectetur adipisicing elit sed doe</p>
+								</div>
+							</div>
+							<a href="img/moi.png" class="thumbnail-zoom">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 portfolio-item mb-30 fadeInUp dye hairstyle filter trans anhig2"  style="visibility: visible; animation-delay: 300ms; animation-name: fadeInUp; position: absolute;">
+						<div class="portfolio-item">
+							<img src="img/qual.png">
+							<div class="overlay-content d-flex align-items-center justify-content-center">
+								<div class="overlay-text text-center">
+									<h4>Hairstyle</h4>
+									<p>Consectetur adipisicing elit sed doe</p>
+								</div>
+							</div>
+							<a href="img/qual.png" class="thumbnail-zoom">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-12 col-lg-3 portfolio-item mb-30 fadeInUp dye hairstyle filter anhig3" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp; position: absolute;">
+						<div class="portfolio-item">
+							<img src="img/dendep.png">
+							<div class="overlay-content d-flex align-items-center justify-content-center">
+								<div class="overlay-text text-center">
+									<h4>Hairstyle</h4>
+									<p>Consectetur adipisicing elit sed doe</p>
+								</div>
+							</div>
+							<a href="img/dendep.png" class="thumbnail-zoom">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3 portfolio-item mb-30 fadeInUp shave filter anhig4" style="visibility: visible; animation-delay: 500ms; animation-name: fadeInUp; position: absolute;">
+						<div class="portfolio-item shave">
+							<img src="img/flyhair.png">
+							<div class="overlay-content d-flex align-items-center justify-content-center">
+								<div class="overlay-text text-center">
+									<h4>Hairstyle</h4>
+									<p>Consectetur adipisicing elit sed doe</p>
+								</div>
+							</div>
+							<a href="img/flyhair.png" class="thumbnail-zoom">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+					<div class="col-12 col-sm-6 col-lg-3 portfolio-item mb-30 fadeInUp hairstyle filter anhig5" style="visibility: visible; animation-delay: 600ms; animation-name: fadeInUp; position: absolute;">
+						<div class="portfolio-item">
+							<img src="img/purplehair.png">
+							<div class="overlay-content d-flex align-items-center justify-content-center">
+								<div class="overlay-text text-center">
+									<h4>Hairstyle</h4>
+									<p>Consectetur adipisicing elit sed doe</p>
+								</div>
+							</div>
+							<a href="img/purplehair.png" class="thumbnail-zoom">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="view-all-btn mt-30 text-center">
+							<button class="btn bx-shd nam-btn">View All Work</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+
+		<div class="expert-area padding-80-0">
+			<div class="side-thumbnail" style="background-image: url(img/14.png);">
+			</div>
+			<div class="container">
+				<div class="row justify-content-end">
+					<div class="col-12 col-lg-6">
+						<div class="section-heading">
+							<h2>Our Experts</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+						</div>
+						<div class="certificate-area mb-60 d-flex align-items-center">
+							<img src="img/certificate-1.png">
+							<img src="img/certificate-2.png">
+							<img src="img/certificate-3.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="single-team-member mbb-80 fadeInUp" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+							<div class="team-member-img">
+								<img src="img/10.jpg">
+								<div class="team-social-info d-flex align-items-center justify-content-center">
+									<div class="social-link">
+										<a href="#">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-linkedin" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-dribbble" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<di class="team-member-info">
+								<h5>Mila Hartley</h5>
+								<p>Hairdresser</p>
+							</di>
+						</div>
+					</div>
+					<!-- end1 -->
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="single-team-member mbb-80 fadeInUp" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+							<div class="team-member-img">
+								<img src="img/11.jpg">
+								<div class="team-social-info d-flex align-items-center justify-content-center">
+									<div class="social-link">
+										<a href="#">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-linkedin" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-dribbble" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<di class="team-member-info">
+								<h5>Mila Hartley</h5>
+								<p>Hairdresser</p>
+							</di>
+						</div>
+					</div>
+					<!-- end2 -->
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="single-team-member mbb-80 fadeInUp" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+							<div class="team-member-img">
+								<img src="img/12.jpg">
+								<div class="team-social-info d-flex align-items-center justify-content-center">
+									<div class="social-link">
+										<a href="#">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-linkedin" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-dribbble" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<di class="team-member-info">
+								<h5>Mila Hartley</h5>
+								<p>Hairdresser</p>
+							</di>
+						</div>
+					</div>
+					<!-- end3 -->
+					<div class="col-12 col-sm-6 col-lg-3">
+						<div class="single-team-member mbb-80 fadeInUp" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+							<div class="team-member-img">
+								<img src="img/13.jpg">
+								<div class="team-social-info d-flex align-items-center justify-content-center">
+									<div class="social-link">
+										<a href="#">
+											<i class="fa fa-facebook" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-twitter" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-linkedin" aria-hidden="true"></i>
+										</a>
+										<a href="#">
+											<i class="fa fa-dribbble" aria-hidden="true"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+							<di class="team-member-info">
+								<h5>Mila Hartley</h5>
+								<p>Hairdresser</p>
+							</di>
+						</div>
+					</div>
+					<!-- edn3 -->
+				</div>
+			</div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+
+		<div class="container">
+			<div class="border-top mt-3"></div>
+		</div>
+		<div class="nam-blog-area padding-80-0 clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="section-heading text-center">
+							<h2>Latest News</h2>
+							<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="single-post-area mbb-80 fadeInUp" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+							<div class="post-thumbnail">
+								<img src="img/1.jpg">
+							</div>
+							<div class="post-content">
+								<a href="#" class="post-title">Nina Dobrev Got a Major Haircut and Doesn't Look Like Nina Dobrev.
+								</a>
+								<div class="post-meta">
+								<a href="#" class="post-date">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									Nomvember 30, 2019
+								</a>
+								<!-- <p>|</p> -->
+								<a href="#" class="post-comments">
+									<i class="fa fa-comments-o" aria-hidden="true"></i>
+									10
+								</a>
+								</div><br>
+								<p>Most people recognize the CFDA Awards for its slew of perfect gowns and skin-tight.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end1 -->
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="single-post-area mbb-80 fadeInUp" style="visibility: visible; animation-delay: 400ms; animation-name: fadeInUp;">
+							<div class="post-thumbnail">
+								<img src="img/2 (2).jpg">
+							</div>
+							<div class="post-content">
+								<a href="#" class="post-title">Finally: How to Make Your Agressively Straight Hair Hold a Curl
+								</a>
+								<div class="post-meta">
+								<a href="#" class="post-date">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									Nomvember 30, 2019
+								</a>
+								<!-- <p>|</p> -->
+								<a href="#" class="post-comments">
+									<i class="fa fa-comments-o" aria-hidden="true"></i>
+									10
+								</a>
+								</div><br>
+								<p>So I sought out an actual professional, i.e. celeb hairstylist Justine Marjan.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end2 -->
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="single-post-area mbb-80 fadeInUp" style="visibility: visible; animation-delay: 200ms; animation-name: fadeInUp;">
+							<div class="post-thumbnail">
+								<img src="img/3.jpg">
+							</div>
+							<div class="post-content">
+								<a href="#" class="post-title">Yes, Emilia Clarke Just Cut Off All Her Hair Into a Tiny Bob
+								</a>
+								<div class="post-meta">
+								<a href="#" class="post-date">
+									<i class="fa fa-clock-o" aria-hidden="true"></i>
+									Nomvember 30, 2019
+								</a>
+								<!-- <p>|</p> -->
+								<a href="#" class="post-comments">
+									<i class="fa fa-comments-o" aria-hidden="true"></i>
+									10
+								</a>
+								</div><br>
+								<p>Most people recognize the CFDA Awards for its slew of perfect gowns and skin-tight.</p>
+							</div>
+						</div>
+					</div>
+					<!-- end3 -->
+				</div>
+			</div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+		<div class="nam-cta-area bg-gray padding-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-sm-10 col-xl-5">
+						<div class="cta-content">
+							<h2>Make Stilo Your <br>
+								Number One Choice
+							</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut la.
+							</p>
+							<div class="nam-btn-group mt-30">
+								<button href="#" class="btn bx-shd nam-btn active mr-3 mb-3 mb-sm-0">Book An Appointment</button>
+								<button onclick="location.href='contact.html'" href="#" class="btn bx-shd nam-btn ">Contact Us</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="cta-thumbnail bg-img" style="background-image: url(img/cta.png);">
+			</div>
+		</div><!-- Endddddddddddddddddddddddddddddddddddddddddddddd-->
+		<footer class="footer-area padding-80-0">
+			<div class="container">
+				<div class="row justify-content-between">
+					<div class="col-12 col-sm-6 col-md-4">
+						<div class="single-footer-widget mbb-80">
+							<a href="hair.html" class="footer-logo">
+								<img src="img/logo.JPG"></img>	
+							</a>
+							<p class="mb-30">We would love to serve you and let you enjoy your culinary experience. Excepteur sint occaecat cupidatat non proident.
+							</p>
+							<div class="copywrite-text">
+								<p>Copyright &copy; All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="file:///C:/Users/DomDom/Documents/TestBoostrap4/hair.html#" target="_blank">HopDEV</a></p>
+							</div>
+						</div>
+					</div><!-- edn1 -->
+					<div class="col-12 col-sm-6 col-md-4 col-xl-3">
+						<div class="single-footer-widget mbb-80">
+							<h4 class="widget-title">Opening times</h4>
+							<div class="open-time">
+								<p>Monday <i class="fa fa-long-arrow-right" aria-hidden="true"></i> Friday: 10.00 - 23.00</p>
+								<p>Saturday: 10.00 - 19.00</p>
+							</div>
+							<div class="social-info">
+								
+							      <a class="facebook" href="https://www.facebook.com/" target="_blank">
+							        <i class="fa fa-facebook" aria-hidden="true"></i>
+							      </a>
+							      <a class="twitter" href="https://twitter.com/login" target="_blank">
+							        <i class="fa fa-twitter" aria-hidden="true"></i>
+							      </a>
+							      <a class="google-plus" href="https://accounts.google.com/" target="_blank">
+							        <i class="fa fa-google-plus" aria-hidden="true"></i>
+							      </a>
+							      <a class="instagram" href="https://www.instagram.com/" target="_blank">
+							        <i class="fa fa-instagram" aria-hidden="true"></i>
+							      </a>
+							</div>
+						</div>
+					</div> <!-- -end2 -->
+					<div class="col-12 col-md-4 col-xl-3">
+						<div class="single-footer-widget mbb-80">
+							<h4 class="widget-title">Contact Us</h4>
+							<div class="contact-address">
+								<p>Tel: (+12) 345 678 910</p>
+								<p>E-mail: HopDEV1702@gmail.com</p>
+								<p>Address: Hue Dev Dev CC-OO</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Enddddddddddddddddddddddddddddddd -->
+		<a id="scrollUp" href="#top" style="position: fixed;z-index: 2">
+			<i class="fa fa-chevron-up" aria-hidden="true"></i>
+		</a>
+	</div>				
+</body>
+</html>								
